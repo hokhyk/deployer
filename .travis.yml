@@ -3,8 +3,7 @@ sudo: false
 language: php
 
 php:
-  - 5.6
-  - 7.0
+  - 7.0.8
   - 7.1.0
 
 env:
@@ -19,15 +18,15 @@ cache:
 
 matrix:
   include:
-    - php: 7.0
+    - php: 7.0.8
       env: DB=mysql
       services:
         - mysql
-    - php: 7.0
+    - php: 7.0.8
       env: DB=maria
       addons:
         mariadb: 10.1
-    - php: 7.0
+    - php: 7.0.8
       env: DB=pgsql
       addons:
         postgresql: "9.3"
@@ -62,7 +61,6 @@ script:
 
   # Clear the compiled file and then try to install without the dev dependencies to ensure everything still works
   - travis_retry composer install --no-dev --no-interaction --prefer-dist --no-suggest --quiet
-  - php artisan optimize
   - php artisan app:version
 
 after_script:
