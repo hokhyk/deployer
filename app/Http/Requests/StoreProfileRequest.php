@@ -16,7 +16,7 @@ class StoreProfileRequest extends Request
     {
         $rules = [
             'name'     => 'required|max:255',
-            'password' => 'required|confirmed|min:6|zxcvbn:3,name',
+            'password' => 'required|confirmed|min:6',
         ];
 
         if ($this->get('password') === '') {
