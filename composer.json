@@ -60,7 +60,7 @@
         "johnkary/phpunit-speedtrap": "^1.0",
         "laravel/dusk": "^1.0",
         "lstrojny/phpunit-clever-and-smart": "0.*",
-        "mockery/mockery": "^0.9",
+        "mockery/mockery": "^1.1",
         "php-mock/php-mock-mockery": "^1.1",
         "phploc/phploc": "~3.0",
         "phpmd/phpmd": "~2.4",
